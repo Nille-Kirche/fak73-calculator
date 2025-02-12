@@ -44,6 +44,12 @@ app.get("/crash", (c) => {
   process.exit(0);
 });
 
+app.get("/stress", (c) => {
+  while (true) {
+    Math.sqrt(Math.random());
+  }
+});
+
 export default {
   fetch: app.fetch,
   port: 8080,
