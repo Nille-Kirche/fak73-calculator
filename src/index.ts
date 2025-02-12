@@ -40,4 +40,8 @@ app.get("/reset", (c) => {
   return c.text("Speicher resettet");
 });
 
+app.get("/crash", (c) => {
+  process.exit(1);
+});
+
 export default app;
