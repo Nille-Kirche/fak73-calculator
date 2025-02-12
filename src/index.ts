@@ -41,7 +41,10 @@ app.get("/reset", (c) => {
 });
 
 app.get("/crash", (c) => {
-  process.exit(1);
+  process.exit(0);
 });
 
-export default app;
+export default {
+  fetch: app.fetch,
+  port: 8080,
+};
